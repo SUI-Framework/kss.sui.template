@@ -1,0 +1,18 @@
+{
+  "//": "The source and destination paths are relative to this file.",
+  "source": ".",
+  "destination": "../../drive2/styleguide",
+  "css": "../../css/drive2.min.css",
+  "js": [
+        "../js/drive2.js",
+        "../js/pollyfills.js",
+        "../js/vendor/royalslider/jquery.royalslider.min.js",
+        "public/js/drv-card.js",
+        "public/js/iframify.js"
+      ],
+  "template": "drive2/sui-kss-template/template",
+  "helpers": "drive2/sui-kss-template/template/helpers",
+  "custom": "sample",
+  "title": "kss-node Style Guide",
+  "verbose": true
+}

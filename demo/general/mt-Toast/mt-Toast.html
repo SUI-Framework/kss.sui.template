@@ -1,0 +1,15 @@
+
+<script type="text/javascript">
+  $(document).on('click', '[data-toast="open"]', function(e){
+    showToast({
+      style: 'ok', // ok, info, warning, error, fixed
+      iconSvg: 'ok',
+      paragraph: 'Toast message',
+      delayTime: 1500,
+      spriteSvgUrl:'../img'
+    });
+    e.preventDefault();
+  });
+</script>
+
+<a href="#overlay-demo" data-toast="open" class="mt-Button">Open Toast v.01</a>

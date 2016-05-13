@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #ddd;
+      margin: 0;
+    }
+    p {
+      font-size: 2rem;
+      margin-top: 0;
+      line-height: 1.5;
+    }
+    .container {
+      background-color: #fff;
+      max-width: 50rem;
+      margin: 0 auto;
+      padding: 2rem;
+      min-height: 200vh;
+      background: rgba(#ddd, .1);
+      background-image:
+        linear-gradient(
+          -45deg,
+          rgba(0, 0, 0, .05) 25%,
+          transparent 25%,
+          transparent 75%,
+          rgba(0, 0, 0, .05) 75%),
+
+        linear-gradient(
+          -45deg,
+          rgba(0,0,0,.05) 25%,
+          transparent 25%,
+          transparent 75%,
+          rgba(0,0,0,.05) 75%
+        );
+      background-position:
+        0 0,
+        10px 10px;
+      background-size: 20px 20px;
+    }
+    .container > :last-child {
+      margin-bottom: 0;
+    }
+    .mt-StickyToolbar p {
+      margin: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="../../../../css/drive2.css">
+</head>
+<body>
+  <div class="container">
+    <div class="mt-StickyToolbar-spacer" data-sticky="spacer">
+      <div class="mt-StickyToolbar mt-Box mt-Box--padding"
+        data-sticky="sticky-demo"
+        data-sticky-offset="-112px"
+        data-sticky-set-width="yes">
+        <p>StickyToolbar</p>
+      </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsum, hic porro aspernatur dolore aperiam veritatis ad aut doloribus soluta modi in officiis aliquid, earum vel, est repellat sequi nulla.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsum, hic porro aspernatur dolore aperiam veritatis ad aut doloribus soluta modi in officiis aliquid, earum vel, est repellat sequi nulla.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsum, hic porro aspernatur dolore aperiam veritatis ad aut doloribus soluta modi in officiis aliquid, earum vel, est repellat sequi nulla.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsum, hic porro aspernatur dolore aperiam veritatis ad aut doloribus soluta modi in officiis aliquid, earum vel, est repellat sequi nulla.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsum, hic porro aspernatur dolore aperiam veritatis ad aut doloribus soluta modi in officiis aliquid, earum vel, est repellat sequi nulla.</p>
+  </div>
+
+  <script src="../../../../js/vendor/jquery-1.11.3.min.js"></script>
+  <script src="../../../../js/drive2.js"></script>
+
+  <script>
+    $('[data-sticky="sticky-demo"]').stickyBox();
+  </script>
+</body>
+</html>

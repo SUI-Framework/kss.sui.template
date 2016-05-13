@@ -1,0 +1,50 @@
+<style type="text/css">
+.gridDemo-padding {
+  padding: 1rem 0;
+  text-align: center;
+}
+.gridDemo-margin {
+  /*margin-bottom: .3rem;*/
+  /*margin-right: .1rem;*/
+  /*margin-left: 0rem;*/
+    /*margin: 1px;*/
+}
+
+[class*="mt-Grid-col"] {
+    outline: 1px solid white;
+    outline-offset: -1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+</style>
+<div class="mt-Grid-outerWrap u-mb--large">
+  <div class="mt-Grid">
+    <div class="mt-Grid-row">
+      <article class="mt-Grid-col--sm-4 u-bgc--pruebas gridDemo-padding">
+         <h3>4 cols </h3>
+         Standard
+      </article>
+      <article class="mt-Grid-push--sm-4 mt-Grid-col--sm-4 u-bgc--presentacion gridDemo-padding">
+        <h3>4 cols </h3>
+        Pushed 4 cols
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="mt-Grid-outerWrap u-mb--large">
+  <div class="mt-Grid">
+    <div class="mt-Grid-row">
+      <article class="mt-Grid-col--sm-8 u-bgc--pruebas gridDemo-padding">
+         <h3>8 cols </h3>
+         Standard
+      </article>
+      <article class="mt-Grid-pull--1 mt-Grid-col--sm-4 u-bgc--presentacion gridDemo-padding">
+        <h3>4 cols </h3>
+        Pulled 1 col
+      </article>
+    </div>
+  </div>
+</div>

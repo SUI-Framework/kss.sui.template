@@ -76,13 +76,15 @@
       </div>
     </div>
   </header>
+  {{#eachSection rootName}}
+  {{#ifDepth 1}}
   <section class="title">
     <div class="row">
       <div class="center">
         <div class="container-center clear">
           <div class="col-8">
-            <h1>Getting started</h1>
-            <h2>An overview of Bootstrap, how to download and use, basic templates and examples, and more.</h2>
+            <h1>{{header}}</h1>
+            <h2>{{{description}}}</h2>
           </div>
         </div>
 
@@ -129,73 +131,104 @@
       </div>
     </div>
   </section>
+  {{else}}
+  <div>{{header}} -  {{depth}}</div>
+    <div class="center">
+      <section class="content" id="download">
+          <div class="row">
+            <div class="container-center">
+              <div class="col-8">
+                <h1>{{header}}<span class="version">v2.3</span></h1>
+                {{#if description}}
+                  {{{description}}}
+                {{/if}}
+                <!-- <div class="button button-black small"><a href="#">View on github</a></div>
+                <div class="button button-red small"><a href="#">View on npm</a></div>
+                <div class="button button-blue small"><a href="#">button</a></div> -->
+              </div>
+            </div>
+            <!-- <div class="container-center">
+              <div class="col-12">
+                <div class="divider"></div>
+              </div>
+            </div>
+            <div class="container-center">
+              <div class="col-12">
+                <h2>Bootstrap CDN</h2>
+                <p>The folks over at MaxCDN graciously provide CDN for <a href="#">Bootstrap's</a> CSS and <span class="featured">Javascript</span>. Just use these Bootstrap CDN links.</p>
+                <p>Lorem ipsum dolor sit amet, adipisicing elit. Minima > dignissimos a modi, illo, harum totam quasi adipisci natus aspernatur animi ipsa, perspiciatis temporibus alias nobis omnis aperiam earum quae.</p>
+              </div>
+              <div class="col-12">
+                <div class="message info">
+                  <h4>Small title with color</h4>
+                  <p>Due to long-standing shortcomings/bugs in Chrome (see issue 262171 in the Chromium bug tracker) and Internet Explorer (see this article on in-page links and focus order), you will need to make sure that the target of your skip link is at
+                    least programmatically focusable by adding <span class="featured">tabindex="-1".</span></p>
+                </div>
+                <p>The folks over at MaxCDN graciously provide CDN for <a href="#">Bootstrap's</a> CSS and <span class="featured">Javascript</span>. Just use these Bootstrap CDN links.</p>
+              </div>
+            </div> -->
+          </div>
+      </section>
+
+      <section class="codes" id="codes">
+        <div class="row">
+          <div class="container-center">
+            <div class="col-12">
+              <div class="sizes-background col-12 no-padding">
+                <div class="sizes col-12 no-padding" id="iframe1">
+                  <p class="title-samples">Example</p>
+                  <input class="input-resolution" value="970">
+                  <span class="unit">px</span>
+                  <ul class="sizes-examples">
+                    <li class="mobile" data-size="320"></li>
+                    <li class="ipad" data-size="768"></li>
+                    <li class="desktop active" data-size="970"></li>
+                  </ul>
+                </div>
+                <div class="iframe-wrapper col-12 no-padding">
+                  <!-- <iframe src="http://w3bits.com/labs/css-responsive-nav/" class="iframe"></iframe> -->
+                  {{#if sample}}
+                    <div class="kss-sample u-mb--large">
+                      {{{ sample }}}
+                    </div>
+                  {{else if markup}}
+                    <div class="kss-sample u-mb--large">
+                      <div class="kss-Boxtransparent">
+                        {{{ markup }}}
+                      </div>
+                    </div>
+                  {{/if}}
+
+                </div>
+              </div>
+
+              {{#if markup}}
+              <div class="code col-12 no-padding">
+                <pre><code class="hljs html">
+                  {{ markup }}
+                </code></pre>
+                <!-- <xmp class="prettyprint">
+                  <pre class="prettyprint linenums lang-html"><code data-language="html">
+                    {{ markup }}
+                  </code></pre>
+                </xmp> -->
+                <span class="copy-content" title="Copy to clipboard">Copy</span>
+              </div>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  {{/ifDepth}}
+
+  {{/eachSection}}
 
   <div class="center">
 
-    <section class="content" id="download">
-      <div class="row">
-        <div class="container-center">
-          <div class="col-8">
-            <h1>Download <span class="version">v2.3</span></h1>
-            <p>Bootstrap (currently v3.3.5) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
-            <div class="button button-black small"><a href="#">View on github</a></div>
-            <div class="button button-red small"><a href="#">View on npm</a></div>
-            <div class="button button-blue small"><a href="#">button</a></div>
-          </div>
-        </div>
-        <div class="container-center">
-          <div class="col-12">
-            <div class="divider"></div>
-          </div>
-        </div>
-        <div class="container-center">
-          <div class="col-12">
-            <h2>Bootstrap CDN</h2>
-            <p>The folks over at MaxCDN graciously provide CDN for <a href="#">Bootstrap's</a> CSS and <span class="featured">Javascript</span>. Just use these Bootstrap CDN links.</p>
-            <p>Lorem ipsum dolor sit amet, adipisicing elit. Minima > dignissimos a modi, illo, harum totam quasi adipisci natus aspernatur animi ipsa, perspiciatis temporibus alias nobis omnis aperiam earum quae.</p>
-          </div>
-          <div class="col-12">
-            <div class="message info">
-              <h4>Small title with color</h4>
-              <p>Due to long-standing shortcomings/bugs in Chrome (see issue 262171 in the Chromium bug tracker) and Internet Explorer (see this article on in-page links and focus order), you will need to make sure that the target of your skip link is at
-                least programmatically focusable by adding <span class="featured">tabindex="-1".</span></p>
-            </div>
-            <p>The folks over at MaxCDN graciously provide CDN for <a href="#">Bootstrap's</a> CSS and <span class="featured">Javascript</span>. Just use these Bootstrap CDN links.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="codes" id="codes">
-      <div class="row">
-        <div class="container-center">
-          <div class="col-12">
-            <div class="sizes-background col-12 no-padding">
-              <div class="sizes col-12 no-padding" id="iframe1">
-                <p class="title-samples">Example</p>
-                <input class="input-resolution" value="970">
-                <span class="unit">px</span>
-                <ul class="sizes-examples">
-                  <li class="mobile" data-size="320"></li>
-                  <li class="ipad" data-size="768"></li>
-                  <li class="desktop active" data-size="970"></li>
-                </ul>
-              </div>
-              <div class="iframe-wrapper col-12 no-padding">
-                <iframe src="http://w3bits.com/labs/css-responsive-nav/" class="iframe"></iframe>
-              </div>
-            </div>
 
-            <div class="code col-12 no-padding">
-              <xmp class="prettyprint">
 
-              </xmp>
-              <span class="copy-content" title="Copy to clipboard">Copy</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="table-content" id="tables">
       <div class="row">

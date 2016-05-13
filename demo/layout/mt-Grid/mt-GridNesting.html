@@ -1,0 +1,58 @@
+<style type="text/css">
+.gridDemo-padding {
+  padding: 1rem 0;
+  text-align: center;
+}
+.gridDemo-margin {
+  /*margin-bottom: .3rem;*/
+  /*margin-right: .1rem;*/
+  /*margin-left: 0rem;*/
+    /*margin: 1px;*/
+}
+
+[class*="mt-Grid-col"] {
+    outline: 1px solid white;
+    outline-offset: -1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+</style>
+
+<div class="mt-Grid-outerWrap u-mb--xlarge">
+  <div class="mt-Grid">
+    <div class="mt-Grid-row">
+      <article class="mt-Grid-col--sm-8 u-bgc--pruebas">
+          <div class="gridDemo-padding">
+            <h3>8 cols </h3>
+              General grid
+          </div>
+          <div class="mt-Grid-row gridDemo-margin">
+            <article class="mt-Grid-col--sm-6 u-bgc--presentacion gridDemo-padding">
+              <h3>6 cols </h3>
+              Nested grid
+            </article>
+            <article class="mt-Grid-col--sm-6 u-bgc--presentacion gridDemo-padding">
+              <h3>6 cols </h3>
+              Nested grid
+            </article>
+         </div>
+      </article>
+      <article class="mt-Grid-col--sm-4 u-bgc--pruebas">
+         <div class="gridDemo-padding">
+            <h3>4 cols</h3>
+              General grid
+          </div>
+          <div class="mt-Grid-row gridDemo-margin">
+            <article class="mt-Grid-col--sm-6 u-bgc--presentacion gridDemo-padding">
+              <h3>6 cols </h3>
+              Nested grid
+            </article>
+            <article class="mt-Grid-col--sm-6 u-bgc--presentacion gridDemo-padding">
+              <h3>6 cols </h3>
+              Nested grid
+            </article>
+         </div>
+      </article>
+    </div>
+  </div>
+</div>

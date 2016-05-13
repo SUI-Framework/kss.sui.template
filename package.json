@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "npm run dist:sass && npm run dist:optimize",
     "dist:sass": "node-sass --output-style nested src/scss/index.scss template/public/sui.css",
-    "dist:optimize": "cssnano template/public/sui.css template/public/sui.min.css --no-reduceIdents --no-mergeIdents --no-zindex --no-discardUnused"
+    "dist:optimize": "cssnano template/public/sui.css template/public/sui.min.css --no-reduceIdents --no-mergeIdents --no-zindex --no-discardUnused",
+    "kss" : "npm-exec kss-node --config kssconfig.json"
   },
   "repository": {
     "type": "git",
